@@ -9,8 +9,6 @@ const registerUser = async(req, res) => {
     }catch(err){
         return res.status(400).json({message: "ユーザー登録失敗"})
     }
-    
-    
 }
 
 export default registerUser
