@@ -11,7 +11,7 @@ const UpdateItem = (props) => {
     const handleSubmit = async(e) => {
         e.preventDefault()
         try{
-            const response = await fetch(`http://localhost:3000/api/item/update/${props.singleItem._id}`, {
+            const response = await fetch(`https://next-market-sigma-amber.vercel.app/api/item/update/${props.singleItem._id}`, {
                 headers: { 
                     "Accept": "application/json", 
                     "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const UpdateItem = (props) => {
 export default UpdateItem
 
 export const getServerSideProps = async(context) => {
-    const response = await fetch(`http://localhost:3000/api/item/${context.query.id}`)
+    const response = await fetch(`https://next-market-sigma-amber.vercel.app/api/item/${context.query.id}`)
     const singleItem = await response.json()
 
     return{
