@@ -9,7 +9,7 @@ const Login = () => {
         e.preventDefault()
 /*e.preventDefault() は、デフォルトのフォーム送信動作をキャンセルし、ページがリロードされないようにします。通常、フォームが送信されるとページが再読み込みされるため、このメソッドはフォームのデフォルト動作を停止します。*/
         try{
-            const response = await fetch("https://next-market-sigma-amber.vercel.app//api/user/login", {  
+            const response = await fetch("http://localhost:3000/api/user/login", {    
                 method: "POST",
                 headers: { 
                     "Accept": "application/json", 
